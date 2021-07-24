@@ -1,0 +1,16 @@
+@font-face {
+  font-family: "Above the Beyond Serif";
+  src: url("../../src/assets/fonts/AbovetheBeyondSerif-Regular.eot");
+  src: local("Above the Beyond Serif Regular"),
+    local("AbovetheBeyondSerif-Regular"),
+    url("../../src/assets/fonts/AbovetheBeyondSerif-Regular.eot?#iefix")
+      format("embedded-opentype"),
+    url("../../src/assets/fonts/AbovetheBeyondSerif-Regular.woff2")
+      format("woff2"),
+    url("../../src/assets/fonts/AbovetheBeyondSerif-Regular.woff")
+      format("woff"),
+    url("../../src/assets/fonts/AbovetheBeyondSerif-Regular.ttf")
+      format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}

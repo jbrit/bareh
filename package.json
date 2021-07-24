@@ -3,13 +3,14 @@
   "version": "1.0.0",
   "description": "Bareh Site (Design By Aise)",
   "scripts": {
-    "dev": "concurrently \"live-server\" \"sass -w src/scss/:dist/\" \"webpack -w\"",
-    "build": "webpack && sass src/scss/:dist/"
+    "dev": "concurrently \"live-server\" \"sass -w src/scss/:dist/css/\" \"webpack -w\"",
+    "build": "webpack && sass src/scss/:dist/css/"
   },
   "author": "Ajibola Ojo",
   "license": "MIT",
   "dependencies": {
-    "gsap": "^3.7.1"
+    "gsap": "^3.7.1",
+    "smooth-scrollbar": "^8.6.2"
   },
   "devDependencies": {
     "concurrently": "^6.2.0",

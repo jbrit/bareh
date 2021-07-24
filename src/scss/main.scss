@@ -1,3 +1,6 @@
+@import "font";
+@import "btn";
+
 * {
   padding: 0;
   margin: 0;
@@ -8,5 +11,21 @@ html,
 body {
   height: 100%;
   width: 100%;
+  font-family: "Above the Beyond Serif";
+  font-weight: 400;
+  background-color: #e5e5e5;
   font-size: 16px;
+  overflow: hidden;
+}
+
+.smooth-scroll-wrapper {
+  width: auto;
+  height: 100vh;
+  overflow: auto;
+}
+
+.items-area {
+  max-height: 900px;
+  min-height: 70vh;
+  background-color: black;
 }

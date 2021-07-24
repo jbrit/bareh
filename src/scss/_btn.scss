@@ -1,0 +1,44 @@
+.btn {
+  border: solid 1px #3a3a3a;
+  color: #3a3a3a;
+  background-color: #e5e5e5;
+  text-transform: uppercase;
+  font-family: sans-serif;
+  font-size: 1.125rem;
+  cursor: pointer;
+  padding: 0.75rem 2rem;
+  position: relative;
+  border-radius: 0.125rem;
+  font-weight: 700;
+  font-family: "Raleway", sans-serif;
+}
+.btn::before,
+.btn::after {
+  content: "";
+  position: absolute;
+  width: calc(100% - 4rem);
+  background-color: #e5e5e5;
+  height: 0.75rem;
+  top: -0.375rem;
+  left: 2rem;
+  transition: all 0.5s ease;
+}
+
+.btn::after {
+  top: auto;
+  left: auto;
+  bottom: -0.375rem;
+  right: 2rem;
+}
+
+.btn:hover::before,
+.btn:hover::after {
+  width: 0%;
+}
+
+.btn:hover {
+  transition-delay: 0.5s;
+  background-color: #3a3a3a;
+  color: #fff;
+  transition-duration: 0.5s;
+}
