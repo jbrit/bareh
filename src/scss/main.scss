@@ -1,5 +1,6 @@
-@import "font";
 @import "btn";
+@import "font";
+@import "utils";
 
 * {
   padding: 0;
@@ -22,10 +23,21 @@ body {
   width: auto;
   height: 100vh;
   overflow: auto;
+  opacity: 0;
 }
 
 .items-area {
-  max-height: 900px;
-  min-height: 70vh;
-  background-color: black;
+  width: 100vw;
+  padding-bottom: 62.5%;
+  background: url("../../src/assets/img/background\ img.png") no-repeat center;
+  background-size: contain;
+  position: relative;
+  --coverHeight: 0%;
+}
+.items-area::before {
+  content: "";
+  position: absolute;
+  height: var(--coverHeight);
+  width: 100%;
+  background-color: #e5e5e5;
 }

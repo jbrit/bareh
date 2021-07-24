@@ -1,0 +1,21 @@
+.split-text {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.split-word {
+  display: inline-block;
+  position: relative;
+  padding-right: 1rem;
+  --wordCoverHeight: 100%;
+  transform: translateY(var(--wordCoverHeight));
+}
+.split-word::before {
+  content: "";
+  top: 0;
+  left: 0;
+  height: var(--wordCoverHeight);
+  width: 100%;
+  background-color: #e5e5e5;
+  position: absolute;
+}
