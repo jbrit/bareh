@@ -18,8 +18,8 @@ const scrolling = () => {
     },
   });
 
-  // Reveal Background Image
-  var tl = gsap.timeline({ ease: "slow (0.7 0.7, false)" });
+  // Section 1: Reveal Background Image
+  var tl = gsap.timeline({ ease: "expo.out", duration: 1.5 });
   tl.set(".smooth-scroll-wrapper", { opacity: 1, duration: 0 }).from(
     ".items-area",
     {
@@ -29,27 +29,43 @@ const scrolling = () => {
       delay: "0.5s",
     }
   );
-  gsap.to(".split-word", {
-    scrollTrigger: {
-      trigger: ".split-word",
-      scroller: document.body,
-      start: "center bottom",
-    },
-    "--wordCoverHeight": "0%",
-    stagger: 0.1,
-    duration: 0.7,
-    delay: 0.5,
-    ease: "expo.out",
+
+  //   Section 2
+  gsap.set(".split-word", { opacity: 0 });
+  const section2Timeline = gsap.timeline({
+    ease: "slow (0.7 0.7, false)",
+    duration: 1.5,
+  });
+  section2Timeline
+    .to(".split-word", {
+      "--wordCoverHeight": "0%",
+      stagger: 0.1,
+      duration: 0.7,
+      opacity: 1,
+      ease: "expo.out",
+    })
+    .from("button", { opacity: 0 }, "-=0.3");
+
+  ScrollTrigger.create({
+    trigger: ".split-text",
+    animation: section2Timeline,
+    start: "bottom bottom",
   });
 
+  //   Section 3
   gsap.from("img", {
     scrollTrigger: {
-      trigger: "img",
+      trigger: ".customize-section",
       scroller: document.body,
       start: "center bottom",
     },
     delay: 0.5,
+    ease: "expo.out",
     opacity: 0,
+    duration: 1.5,
+    translateY: "-100%",
+    height: "0%",
+    width: "50%",
   });
 };
 

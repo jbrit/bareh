@@ -41,3 +41,9 @@ body {
   width: 100%;
   background-color: #e5e5e5;
 }
+img {
+  transition: filter 0.25s ease-in;
+}
+img:hover {
+  filter: grayscale(100%);
+}
