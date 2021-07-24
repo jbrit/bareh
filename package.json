@@ -1,0 +1,21 @@
+{
+  "name": "bareh",
+  "version": "1.0.0",
+  "description": "Bareh Site (Design By Aise)",
+  "scripts": {
+    "dev": "concurrently \"live-server\" \"sass -w src/scss/:dist/\" \"webpack -w\"",
+    "build": "webpack && sass src/scss/:dist/"
+  },
+  "author": "Ajibola Ojo",
+  "license": "MIT",
+  "dependencies": {
+    "gsap": "^3.7.1"
+  },
+  "devDependencies": {
+    "concurrently": "^6.2.0",
+    "live-server": "^1.2.1",
+    "sass": "^1.36.0",
+    "webpack": "^5.46.0",
+    "webpack-cli": "^4.7.2"
+  }
+}
