@@ -1,21 +1,14 @@
 import scrolling from "./scrolling";
+import { splitText } from "./splitText";
 
-const showPage = () => {
-  // split-text
-  document.querySelectorAll(".split-text").forEach(
-    (holder) =>
-      (holder.innerHTML = holder.innerHTML
-        .split(" ")
-        .filter((word) => word !== "")
-        .map((word) => '<span class="split-word">' + word + "</span>")
-        .join(""))
-  );
+const initPage = () => {
+  splitText();
   scrolling();
 };
 
 document.onreadystatechange = (e) => {
-  if (document.readyState == "complete") {
-    showPage();
+  if (document.readyState === "complete") {
+    initPage();
+    console.log("Ready", e);
   }
-  console.log("Ready", e);
 };

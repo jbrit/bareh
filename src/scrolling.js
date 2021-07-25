@@ -19,7 +19,7 @@ const scrolling = () => {
   });
 
   // Section 1: Reveal Background Image
-  var tl = gsap.timeline({ ease: "expo.out", duration: 1.5 });
+  var tl = gsap.timeline({ ease: "expo.out", duration: 2 });
   tl.set(".smooth-scroll-wrapper", { opacity: 1, duration: 0 }).from(
     ".items-area",
     {
@@ -49,11 +49,11 @@ const scrolling = () => {
   ScrollTrigger.create({
     trigger: ".split-text",
     animation: section2Timeline,
-    start: "bottom bottom",
+    start: "top bottom",
   });
 
   //   Section 3
-  gsap.from("img", {
+  gsap.from("img-s2", {
     scrollTrigger: {
       trigger: ".customize-section",
       scroller: document.body,

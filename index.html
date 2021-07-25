@@ -41,13 +41,29 @@
       </section>
       <section
         class="customize-section"
-        style="display: grid; grid-template-columns: 658fr 142fr 540fr 100fr"
+        style="
+          display: grid;
+          grid-template-columns: 658fr 142fr 540fr 100fr;
+          margin-bottom: 240px;
+        "
       >
-        <div>
+        <div style="position: relative">
           <img
+            class="img-s2"
             src="./src/assets/img/img_1.png"
             alt="Women Standing in a kitchen"
             style="height: 100%; width: 100%; object-fit: cover"
+          />
+          <img
+            src="./src/assets/img/woman in apartment.png"
+            alt="Woman Sitting in an apartment"
+            style="
+              position: absolute;
+              height: 250px;
+              width: 441px;
+              bottom: -157px;
+              right: -62px;
+            "
           />
         </div>
         <div
@@ -57,10 +73,9 @@
             display: flex;
             justify-content: flex-end;
             flex-direction: column;
-            margin-bottom: 60px;
           "
         >
-          <div style="padding-bottom: 21px">
+          <div style="padding: 21px 0">
             Style your apartment to your taste from a range of available
             furnitures
           </div>
