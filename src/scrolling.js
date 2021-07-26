@@ -40,32 +40,48 @@ const scrolling = () => {
     .to(".split-word", {
       "--wordCoverHeight": "0%",
       stagger: 0.1,
-      duration: 0.7,
+      duration: 0.5,
       opacity: 1,
       ease: "expo.out",
     })
-    .from("button", { opacity: 0 }, "-=0.3");
+    .from(".started-btn", { opacity: 0 }, "-=0.5");
 
   ScrollTrigger.create({
     trigger: ".split-text",
     animation: section2Timeline,
-    start: "top bottom",
+    // start: "top bottom",
   });
 
   //   Section 3
-  gsap.from("img-s2", {
-    scrollTrigger: {
-      trigger: ".customize-section",
-      scroller: document.body,
-      start: "center bottom",
-    },
-    delay: 0.5,
-    ease: "expo.out",
-    opacity: 0,
-    duration: 1.5,
-    translateY: "-100%",
-    height: "0%",
-    width: "50%",
+  const section3Timeline = gsap.timeline();
+  ScrollTrigger.create({
+    trigger: ".customize-section",
+    scroller: document.body,
+    start: "center bottom",
+    animation: section3Timeline,
+  });
+  section3Timeline
+    .from(".img-s2", {
+      delay: 0.5,
+      ease: "expo.out",
+      opacity: 0,
+      duration: 1.5,
+      y: "-100%",
+    })
+    .from(".img-s2-rt", { opacity: 0 });
+
+  const customize = document.querySelector(".customize-section");
+  customize.addEventListener("mousemove", (e) => {
+    const { target, clientX, clientY } = e,
+      xPos = clientX / target.offsetWidth - 0.5,
+      yPos = clientY / target.offsetHeight - 0.5;
+    if (target !== customize) return;
+    gsap.to(".img-s2-rt", {
+      x: xPos * 40,
+      y: yPos * 60,
+      rotateX: -(yPos * 20),
+      rotateY: xPos * 30,
+    });
   });
 };
 

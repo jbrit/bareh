@@ -1,4 +1,5 @@
 @import "btn";
+@import "card";
 @import "font";
 @import "utils";
 
@@ -6,6 +7,9 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  &::selection {
+    background-color: rgba(51, 51, 51, 0.1);
+  }
 }
 
 html,
@@ -33,17 +37,17 @@ body {
   background-size: contain;
   position: relative;
   --coverHeight: 0%;
+  &::before {
+    content: "";
+    position: absolute;
+    height: var(--coverHeight);
+    width: 100%;
+    background-color: #e5e5e5;
+  }
 }
-.items-area::before {
-  content: "";
-  position: absolute;
-  height: var(--coverHeight);
-  width: 100%;
-  background-color: #e5e5e5;
-}
-img {
-  transition: filter 0.25s ease-in;
-}
-img:hover {
-  filter: grayscale(100%);
+.customize-section {
+  perspective: 2000px;
+  & > * {
+    pointer-events: none;
+  }
 }

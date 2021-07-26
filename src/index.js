@@ -9,6 +9,5 @@ const initPage = () => {
 document.onreadystatechange = (e) => {
   if (document.readyState === "complete") {
     initPage();
-    console.log("Ready", e);
   }
 };

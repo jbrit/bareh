@@ -36,7 +36,7 @@
           <div class="split-text">
             To Every Classy Man, There is a Classy Apartment behind him
           </div>
-          <button class="btn">Get Started</button>
+          <button class="btn started-btn">Get Started</button>
         </div>
       </section>
       <section
@@ -44,7 +44,7 @@
         style="
           display: grid;
           grid-template-columns: 658fr 142fr 540fr 100fr;
-          margin-bottom: 240px;
+          padding-bottom: 240px;
         "
       >
         <div style="position: relative">
@@ -52,9 +52,15 @@
             class="img-s2"
             src="./src/assets/img/img_1.png"
             alt="Women Standing in a kitchen"
-            style="height: 100%; width: 100%; object-fit: cover"
+            style="
+              --coverheight: 0%;
+              height: 100%;
+              width: 100%;
+              object-fit: cover;
+            "
           />
           <img
+            class="img-s2-rt"
             src="./src/assets/img/woman in apartment.png"
             alt="Woman Sitting in an apartment"
             style="
@@ -91,13 +97,154 @@
             pulvinar interdum donec, consectetur adipiscing elit. Etiam pulvinar
             interdum donec
           </p>
-          <div><button class="btn">Customize your Apartment</button></div>
+          <div>
+            <button class="btn customize-btn">Customize your Apartment</button>
+          </div>
         </div>
       </section>
-      <section></section>
-      <section></section>
-      <section style="background: #c4c4c4; height: 20vh"></section>
-      <footer></footer>
+      <section style="padding: 200px 0">
+        <div
+          style="
+            display: grid;
+            grid-template: 1fr 1fr / 1fr 1fr 1fr;
+            column-gap: 1rem;
+            row-gap: 5rem;
+            padding: 0 100px;
+          "
+        >
+          <div
+            style="
+              padding: 100px 0;
+              display: flex;
+              align-items: center;
+              font-size: 3rem;
+              max-width: 400px;
+            "
+          >
+            We give all forms of house accessories to spice up your living
+          </div>
+          <div class="explore-card"></div>
+          <div class="explore-card"></div>
+          <div class="explore-card"></div>
+          <div class="explore-card"></div>
+          <div class="explore-card"></div>
+        </div>
+      </section>
+      <section class="process-section"></section>
+      <section class=""></section>
+      <section
+        style="background: #c4c4c4; padding: 100px 0; margin-bottom: 300px"
+      >
+        <div style="text-align: center; font-size: 5rem">Some Feedback</div>
+        <div style="padding: 0 100px; display: grid"></div>
+      </section>
+      <footer>
+        <div style="padding: 0 100px">
+          <div style="display: flex; margin-bottom: 200px">
+            <div style="font-size: 5rem; line-height: 6rem; width: 50%">
+              Ready to give your apartment some style?
+            </div>
+
+            <div
+              style="
+                width: 50%;
+                display: flex;
+                align-items: flex-end;
+                justify-content: flex-end;
+                padding-bottom: 34px;
+                position: relative;
+              "
+            >
+              <img
+                style="position: absolute; width: 40vw; left: -5vw"
+                src="./src/assets/svg/contact line.svg"
+                alt=""
+              />
+              <button class="btn">Let's Discuss</button>
+            </div>
+          </div>
+          <div
+            style="
+              display: grid;
+              grid-template-columns: 1fr 1fr 1fr;
+              column-gap: 2rem;
+              font-family: 'Raleway';
+              padding-bottom: 0.75rem;
+            "
+          >
+            <div style="display: flex; flex-direction: column">
+              <span style="margin-bottom: 1.5rem"> Call Us </span>
+              <a
+                href="tel:+2347050424927"
+                style="
+                  font-size: 3rem;
+                  color: black;
+                  text-decoration: none;
+                  margin-bottom: 0.5rem;
+                "
+                >07050424927</a
+              >
+              <span>Mon - Fri (8:30 -17:30)</span>
+            </div>
+            <div style="display: flex; flex-direction: column">
+              <span style="margin-bottom: 1.5rem"> Email </span>
+
+              <a
+                href="mailto:pro.ajibolaojo@gmail.com"
+                style="font-size: 3rem; color: black; text-decoration: none"
+                >bareh@support.com</a
+              >
+              <span style="background-color: black; height: 1px"></span>
+            </div>
+            <div style="display: flex; flex-direction: column">
+              <span style="margin-bottom: 1.5rem"> Connect With Us </span>
+              <div style="display: flex">
+                <a
+                  href="#"
+                  style="
+                    height: 48px;
+                    width: 48px;
+                    border-radius: 50%;
+                    margin-right: 0.75rem;
+                    background-color: rgba(51, 51, 51, 0.1);
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                  "
+                  ><img src="./src/assets/svg/instagram.svg" alt="Social Icon"
+                /></a>
+                <a
+                  href="#"
+                  style="
+                    height: 48px;
+                    width: 48px;
+                    border-radius: 50%;
+                    margin-right: 0.75rem;
+                    background-color: rgba(51, 51, 51, 0.1);
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                  "
+                  ><img src="./src/assets/svg/twitter.svg" alt="Social Icon"
+                /></a>
+                <a
+                  href="#"
+                  style="
+                    height: 48px;
+                    width: 48px;
+                    border-radius: 50%;
+                    background-color: rgba(51, 51, 51, 0.1);
+                    display: inline-flex;
+                    align-items: center;
+                    justify-content: center;
+                  "
+                  ><img src="./src/assets/svg/youtube.svg" alt="Social Icon"
+                /></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
     </main>
     <script src="./dist/main.js"></script>
   </body>

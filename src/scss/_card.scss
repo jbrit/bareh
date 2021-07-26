@@ -1,0 +1,12 @@
+.explore-card {
+  position: relative;
+  &::before {
+    content: "";
+    width: 0.75px;
+    height: calc(100% + 0.5rem);
+    background-color: black;
+    top: 0;
+    left: -0.5rem;
+    position: absolute;
+  }
+}
