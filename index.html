@@ -17,9 +17,61 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap"
       rel="stylesheet"
     />
+    <style>
+      @keyframes pendulum {
+        0% {
+          transform: translateX(-100%);
+        }
+        50% {
+          transform: translateX(100%);
+        }
+        100% {
+          transform: translateX(-100%);
+        }
+      }
+      .loader-line {
+        display: block;
+        height: 100%;
+        width: 100%;
+        background-color: rgba(51, 51, 51, 0.5);
+        animation-name: pendulum;
+        animation-duration: 8s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+      }
+    </style>
     <title>Bareh</title>
   </head>
   <body>
+    <section
+      class="loader"
+      style="
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        z-index: 10;
+        height: 100vh;
+        width: 100vw;
+        position: absolute;
+        font-size: 5rem;
+        background-color: #c5c5c5;
+      "
+    >
+      <div class="loader-content" style="display: flex; flex-direction: column">
+        <div style="margin-bottom: 1rem">Bareh</div>
+        <div
+          style="
+            height: 2px;
+            width: 100%;
+            overflow: hidden;
+            background-color: rgba(51, 51, 51, 0.1);
+          "
+        >
+          <span class="loader-line"></span>
+        </div>
+      </div>
+    </section>
     <main class="smooth-scroll-wrapper">
       <header></header>
       <section class="items-area"></section>
